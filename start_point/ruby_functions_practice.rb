@@ -16,6 +16,10 @@ def multiply(num1, num2)
   return num1 * num2
 end
 
+def divide(num1, num2)
+  return num1 / num2
+end
+
 def length_of_string(test_string)
   test_string.length
 end
@@ -31,4 +35,22 @@ end
 require 'Date'
 def number_to_full_month_name(int)
   return  Date::MONTHNAMES[int]
+end
+
+require 'Date'
+def number_to_short_month_name(int)
+  return Date::ABBR_MONTHNAMES[int]
+end
+
+def volume_of_cube(int)
+  return int**3
+end
+
+
+def volume_of_sphere(r)
+  return ((4*3.14159265359*r**3)/3).round(2)
+end
+
+def celsius_convert(temp)
+  return ((temp.to_f - 32) * 5 / 9).round(2)
 end

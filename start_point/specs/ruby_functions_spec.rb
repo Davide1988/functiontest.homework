@@ -23,12 +23,12 @@ class FunctionsTest < MiniTest::Test
       multiply_result = multiply( 4, 2 )
       assert_equal( 8, multiply_result )
     end
-  #
-  # def test_divide()
-  #   divide_result = divide( 10, 2 )
-  #   assert_equal( 5, divide_result )
-  # end
-  #
+
+  def test_divide()
+    divide_result = divide( 10, 2 )
+    assert_equal( 5, divide_result )
+  end
+
   def test_length_of_string()
     test_string = "A string of length 21"
     length_of_string = length_of_string( test_string )
@@ -52,47 +52,50 @@ class FunctionsTest < MiniTest::Test
     assert_equal( "January", result )
   end
 
-  # def test_number_to_full_name__month_3()
-  #   result = number_to_full_month_name( 3 )
-  #   assert_equal( "March", result )
-  # end
-  #
-  # def test_number_to_full_name__month_9()
-  #   result = number_to_full_month_name( 9 )
-  #   assert_equal( "September", result )
-  # end
-  #
-  # def test_substring__month_1()
-  #   first_month_string = number_to_short_month_name( 1 )
-  #   assert_equal( "Jan", first_month_string )
-  # end
-  #
-  # def test_substring__month_4()
-  #   fourth_month_string = number_to_short_month_name( 4 )
-  #   assert_equal( "Apr", fourth_month_string )
-  # end
-  #
-  # def test_substring__month_10()
-  #   tenth_month_string = number_to_short_month_name( 10 )
-  #   assert_equal( "Oct", tenth_month_string )
-  # end
-  #
-  # #Further
-  #
-  # #Given the length of a side of a cube calculate the volume
-  # def test_volume_of_cube()
-  #   #add test code here
-  # end
-  #
-  # #Given the radius of a sphere calculate the volume
-  # def test_volume_of_sphere()
-  #   #add test code here
-  # end
-  #
-  # #Given a value in farenheit, convert this into celsius.
-  # def test_fahrenheit_to_celsius()
-  #   #add test code here
-  # end
+  def test_number_to_full_name__month_3()
+    result = number_to_full_month_name( 3 )
+    assert_equal( "March", result )
+  end
+
+  def test_number_to_full_name__month_9()
+    result = number_to_full_month_name( 9 )
+    assert_equal( "September", result )
+  end
+
+  def test_substring__month_1()
+    first_month_string = number_to_short_month_name( 1 )
+    assert_equal( "Jan", first_month_string )
+  end
+
+  def test_substring__month_4()
+    fourth_month_string = number_to_short_month_name( 4 )
+    assert_equal( "Apr", fourth_month_string )
+  end
+
+  def test_substring__month_10()
+    tenth_month_string = number_to_short_month_name( 10 )
+    assert_equal( "Oct", tenth_month_string )
+  end
+
+  #Further
+
+  #Given the length of a side of a cube calculate the volume
+  def test_volume_of_cube()
+    volume_of_cube_result = volume_of_cube( 3 )
+    assert_equal(27, volume_of_cube_result)
+  end
+
+  #Given the radius of a sphere calculate the volume
+  def test_volume_of_sphere()
+    volume_of_sphere_result = volume_of_sphere( 4 )
+    assert_equal(268.08, volume_of_sphere_result)
+  end
+
+  #Given a value in farenheit, convert this into celsius.
+  def test_fahrenheit_to_celsius()
+    celsius_test = celsius_convert( 110 )
+    assert_equal(43.33, celsius_test)
+  end
 
 
 end
