@@ -1,3 +1,5 @@
+
+
 def return_10()
   return 10
 end
@@ -24,4 +26,9 @@ end
 
 def add_string_as_number (string1, string2)
   string1.to_i + string2.to_i
+end
+
+require 'Date'
+def number_to_full_month_name(int)
+  return  Date::MONTHNAMES[int]
 end
